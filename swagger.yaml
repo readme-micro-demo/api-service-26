@@ -159,8 +159,7 @@ paths:
           description: ID of pet to return
           required: true
           schema:
-            type: integer
-            format: int64
+            type: string
       responses:
         '200':
           description: successful operation
@@ -173,8 +172,6 @@ paths:
                 '$ref': '#/components/schemas/Pet'
         '400':
           description: Invalid ID supplied
-        '404':
-          description: Pet not found
         default:
           description: successful response
       security:
